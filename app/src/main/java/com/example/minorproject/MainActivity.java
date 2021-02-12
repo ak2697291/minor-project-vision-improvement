@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
   private CardView currencyDetector,roomLightDetector,documentReader,settings;
@@ -29,6 +31,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                String s =" 1 top left currency detector. 2 top right document reader. 3 bottom left room light detector. 4 bottom right settings";
+                int speech = textToSpeech.speak(s,TextToSpeech.QUEUE_FLUSH,null);
+            }
+        },700);
+
+
         //creating variable
         currencyDetector = (CardView)findViewById(R.id.currency);
         roomLightDetector = (CardView)findViewById(R.id.roomlight);
