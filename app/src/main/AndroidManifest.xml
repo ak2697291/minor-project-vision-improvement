@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MinorProject">
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".DocumentReader" />
+        <activity android:name=".RoomLightDetector" />
+        <activity android:name=".CurrencyDetector" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
