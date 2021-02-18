@@ -9,6 +9,8 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Toast;
 
+import org.tensorflow.lite.examples.classification.ClassifierActivity;
+
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.currency:
                 String s1 ="opening Currency Detector";
                 int speech1 = textToSpeech.speak(s1,TextToSpeech.QUEUE_FLUSH,null);
-                i= new Intent(this,CurrencyDetector.class);
+                i= new Intent(this, ClassifierActivity.class);
                 startActivity(i);
                 break;
 
