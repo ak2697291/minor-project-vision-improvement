@@ -553,6 +553,7 @@ public abstract class CameraActivity extends AppCompatActivity
 boolean Rs10_ = false;
   boolean Rs20_ = false;
   boolean Rs50_ = false;
+
   @UiThread
   protected void showResultsInBottomSheet(List<Recognition> results) {
 
@@ -564,6 +565,7 @@ boolean Rs10_ = false;
           recognitionValueTextView.setText(
                   String.format("%.2f", (100 * recognition.getConfidence())) + "%");
         float confi = 100 * recognition.getConfidence();
+
         try {
           if (!Rs20_ && recognitionTextView.getText().toString().equalsIgnoreCase("20") && confi>99 ) {
             mp1.start();
